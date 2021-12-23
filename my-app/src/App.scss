@@ -1,0 +1,46 @@
+.App {
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__wrapper {
+    padding: 20px;
+    width: 400px;
+    border-radius: 10px;
+    background-color: rgb(139, 189, 255);
+  }
+
+  &__stopwatch {
+    margin-bottom: 20px;
+    font-size: 40px;
+    text-align: center;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__button {
+    display: block;
+
+    width: 80px;
+    height: 35px;
+
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(255, 236, 125);
+    font-size: 16px;
+    cursor: pointer;
+
+    transition: background-color 0.3s,
+    box-shadow 0.3s;
+
+    &:hover {
+      background-color: rgb(255, 225, 53);
+      box-shadow: 0 6px 8px 0 rgba(241, 255, 119, 0.712);
+    }
+  }
+}
