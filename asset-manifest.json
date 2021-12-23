@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Dima-Ziakhor/tt/static/css/main.0ba54319.css",
-    "main.js": "/Dima-Ziakhor/tt/static/js/main.9683fed8.js",
-    "static/js/787.cfd8f164.chunk.js": "/Dima-Ziakhor/tt/static/js/787.cfd8f164.chunk.js",
-    "index.html": "/Dima-Ziakhor/tt/index.html",
-    "main.0ba54319.css.map": "/Dima-Ziakhor/tt/static/css/main.0ba54319.css.map",
-    "main.9683fed8.js.map": "/Dima-Ziakhor/tt/static/js/main.9683fed8.js.map",
-    "787.cfd8f164.chunk.js.map": "/Dima-Ziakhor/tt/static/js/787.cfd8f164.chunk.js.map"
+    "main.css": "/Dima-Ziakhor/tt/tree/main/my-app/static/css/main.0ba54319.css",
+    "main.js": "/Dima-Ziakhor/tt/tree/main/my-app/static/js/main.4a957049.js",
+    "static/js/787.cfd8f164.chunk.js": "/Dima-Ziakhor/tt/tree/main/my-app/static/js/787.cfd8f164.chunk.js",
+    "index.html": "/Dima-Ziakhor/tt/tree/main/my-app/index.html",
+    "main.0ba54319.css.map": "/Dima-Ziakhor/tt/tree/main/my-app/static/css/main.0ba54319.css.map",
+    "main.4a957049.js.map": "/Dima-Ziakhor/tt/tree/main/my-app/static/js/main.4a957049.js.map",
+    "787.cfd8f164.chunk.js.map": "/Dima-Ziakhor/tt/tree/main/my-app/static/js/787.cfd8f164.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0ba54319.css",
-    "static/js/main.9683fed8.js"
+    "static/js/main.4a957049.js"
   ]
 }
