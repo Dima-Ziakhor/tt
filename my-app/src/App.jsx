@@ -7,27 +7,51 @@ import './App.scss';
 const App = () => {
   const [seconds, setSeconds] = useState(0);
   const [status, setStatus] = useState('stop');
+  const [timer, setTimer] = useState(300);
+  const [isClick, setIsClick] = useState(false);
+  const [isClickable, setIsClickable] = useState(false);
 
   useEffect(() => {
     const subject = new Subject();
 
-    interval(1000)
+    interval(10)
       .pipe(takeUntil(subject))
       .subscribe(() => {
-        if (status === 'start') {
-          setSeconds(value => value + 1000);
+        if (status === 'start' || status === 'waiting') {
+          setSeconds(value => value + 10);
+        }
+
+        if (status === 'waiting') {
+          setTimer(value => value - 10);
         }
       });
+
+      if (timer > 0) {
+        setIsClickable(true);
+      } else {
+        setIsClickable(false);
+        setIsClick(false);
+        setTimer(300);
+      }
 
       return () => {
         subject.next();
         subject.complete();
       };
-  }, [status]);
+  }, [timer, status]);
 
   const start = useCallback(() => setStatus('start'), []);
 
-  const wait = useCallback(() => setStatus('wait'), []);
+  const wait = useCallback(() => {
+    setStatus('waiting');
+    setIsClick(true);
+
+    if (isClick && isClickable) {
+      setStatus('wait');
+      setIsClick(false);
+      setIsClickable(false);
+    }
+  }, [isClick, isClickable]);
 
   const reset = useCallback(() => setSeconds(0), []);
 
@@ -61,8 +85,12 @@ const App = () => {
           </button>
 
           <button
+            id="wait"
             className="App__button"
-            onDoubleClick={wait}
+            onClick={() => {
+              wait();
+              console.log(isClick, isClickable)
+            }}
           >
             Wait
           </button>
